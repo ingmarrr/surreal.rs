@@ -1,0 +1,21 @@
+[package]
+name = "surreal-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+async-trait = "0.1.59"
+reqwest = "0.11.13"
+serde = { version = "1.0.150", features = ["derive"] }
+serde_json = "1.0.89"
+thiserror = "1.0.37"
+tungstenite = "0.18.0"
+tokio-tungstenite = "0.18.0"
+chrono = { version = "0.4.23", features = ["serde"] }
+
+[features]
+default = ["https", "ws", "macros"]
+https = []
+ws = []
+macros = []
